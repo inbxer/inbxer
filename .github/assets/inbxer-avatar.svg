@@ -1,0 +1,48 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="70%" fx="50%" fy="45%">
+      <stop offset="0%" stop-color="#161C26"/>
+      <stop offset="60%" stop-color="#0E1219"/>
+      <stop offset="100%" stop-color="#080A0E"/>
+    </radialGradient>
+
+    <!-- Front Square Gradient (Inbxer Signature Blue) -->
+    <linearGradient id="blueSquareGrad" x1="432" y1="432" x2="782" y2="782" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2B8DF2"/>
+      <stop offset="100%" stop-color="#146FCB"/>
+    </linearGradient>
+
+    <!-- Back Square Gradient (Clean Slate Light) -->
+    <linearGradient id="lightSquareGrad" x1="242" y1="242" x2="592" y2="592" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E4E7ED"/>
+    </linearGradient>
+
+    <!-- Soft Shadow for Back Square -->
+    <filter id="backShadow" x="180" y="180" width="474" height="474" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+
+    <!-- Deep Shadow for Front Square -->
+    <filter id="frontShadow" x="370" y="370" width="474" height="474" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="-8" dy="16" stdDeviation="28" flood-color="#070B12" flood-opacity="0.65"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1024" height="1024" fill="url(#bgGlow)"/>
+
+  <!-- Back Square (Light / Inbox) -->
+  <g filter="url(#backShadow)">
+    <rect x="242" y="242" width="350" height="350" rx="44" fill="url(#lightSquareGrad)"/>
+    <rect x="242.5" y="242.5" width="349" height="349" rx="43.5" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1"/>
+  </g>
+
+  <!-- Front Square (Inbxer Blue) -->
+  <g filter="url(#frontShadow)">
+    <rect x="432" y="432" width="350" height="350" rx="44" fill="url(#blueSquareGrad)"/>
+    <rect x="432.5" y="432.5" width="349" height="349" rx="43.5" stroke="#60A5FA" stroke-opacity="0.4" stroke-width="1"/>
+  </g>
+</svg>
